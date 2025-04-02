@@ -1,0 +1,108 @@
+/* General Container */
+.mission-list-container {
+  text-align: center;
+  
+  background: #f1f5f8; /* Soft off-white background for contrast */
+  min-height: 100vh;
+}
+
+/* Mission Cards Layout (1 per line on all screen sizes) */
+.mission-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 20px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Mission Card Styling */
+.mission-card {
+  background: #a1a6c6;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 5px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.mission-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Mission Image */
+.mission-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 10px;
+}
+
+/* Text Styles */
+.mission-card h3 {
+  color: #2a3d66; /* Dark Blue */
+  font-size: 1.6em;
+  margin-bottom: 12px;
+}
+
+.mission-card p {
+  color: #666;
+  font-size: 1em;
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* Buttons & Links */
+.mission-card a,
+button {
+  display: inline-block;
+  padding: 12px 18px;
+  margin: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Mission Card Links */
+.mission-card a {
+  background: #ffb400; /* Soft Yellow */
+  color: white;
+}
+
+.mission-card a:hover {
+  background: #e69f00; /* Slightly darker yellow */
+}
+
+/* Primary Button */
+button {
+  background: linear-gradient(45deg, #2a3d66, #0056b3); /* Deep Blue */
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #0056b3, #003f7f); /* Darker blue */
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design (Still just one per line) */
+@media (max-width: 768px) {
+  .mission-container {
+    grid-template-columns: 1fr;
+  }
+}

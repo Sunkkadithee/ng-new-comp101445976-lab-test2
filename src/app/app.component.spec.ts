@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the '101445976-lab-test-comp3133' title`, () => {
+  it(`should have the '101445976_lab_test2_comp3133' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('101445976-lab-test-comp3133');
+    expect(app.title).toEqual('101445976_lab_test2_comp3133');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, 101445976-lab-test-comp3133');
+    expect(compiled.querySelector('h1')?.textContent).toContain('101445976_lab_test2_comp3133');
   });
 });
